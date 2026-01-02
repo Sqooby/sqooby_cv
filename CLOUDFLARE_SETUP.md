@@ -24,11 +24,11 @@
 
 **Production branch:** `main`
 
-**Framework preset:** `Next.js` (Cloudflare automatycznie wykryje Next.js)
+**Framework preset:** `None` (lub zostaw puste - używamy static export)
 
 **Build command:** `npm run build`
 
-**Build output directory:** `.next` (dla Next.js z adapterem) lub `out` (jeśli używasz static export)
+**Build output directory:** `out` ⬅️ **TO JEST WAŻNE - wpisz dokładnie: `out`**
 
 **Root directory:** `/` (zostaw puste lub `/`)
 
