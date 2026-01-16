@@ -24,15 +24,15 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden grain"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden grain pt-20 sm:pt-0"
     >
       {/* Animated Background Gradients - Optimized with will-change */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-1/4 -left-1/4 w-96 h-96 bg-accent-blue/30 rounded-full blur-3xl will-change-transform"
+          className="absolute top-1/4 -left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-accent-blue/30 rounded-full blur-3xl will-change-transform"
           animate={{
-            x: [0, 100, 0],
-            y: [0, -50, 0],
+            x: [0, 50, 0],
+            y: [0, -30, 0],
           }}
           transition={{
             duration: 20,
@@ -42,10 +42,10 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute top-1/3 right-0 w-[500px] h-[500px] bg-accent-purple/30 rounded-full blur-3xl will-change-transform"
+          className="absolute top-1/3 right-0 w-80 h-80 sm:w-[500px] sm:h-[500px] bg-accent-purple/30 rounded-full blur-3xl will-change-transform"
           animate={{
-            x: [0, -100, 0],
-            y: [0, 100, 0],
+            x: [0, -50, 0],
+            y: [0, 50, 0],
           }}
           transition={{
             duration: 25,
@@ -55,10 +55,10 @@ export default function Hero() {
           }}
         />
         <motion.div
-          className="absolute bottom-1/4 left-1/2 w-96 h-96 bg-accent-cyan/20 rounded-full blur-3xl will-change-transform"
+          className="absolute bottom-1/4 left-1/2 w-64 h-64 sm:w-96 sm:h-96 bg-accent-cyan/20 rounded-full blur-3xl will-change-transform"
           animate={{
-            x: [0, -80, 0],
-            y: [0, 80, 0],
+            x: [0, -40, 0],
+            y: [0, 40, 0],
           }}
           transition={{
             duration: 18,
@@ -77,13 +77,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="flex items-center justify-center space-x-2 mb-6"
+            className="flex items-center justify-center space-x-2 mb-4 sm:mb-6"
           >
-            <Sparkles className="w-5 h-5 text-accent-cyan" />
-            <span className="text-accent-cyan font-mono text-sm tracking-wider uppercase">
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent-cyan" />
+            <span className="text-accent-cyan font-mono text-xs sm:text-sm tracking-wider uppercase">
               Witaj w moim portfolio
             </span>
-            <Sparkles className="w-5 h-5 text-accent-cyan" />
+            <Sparkles className="w-4 h-4 sm:w-5 sm:h-5 text-accent-cyan" />
           </motion.div>
 
           {/* Name */}
@@ -91,14 +91,14 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold mb-6"
+            className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-display font-bold mb-4 sm:mb-6 px-2"
           >
             <span className="block text-white mb-2">
               Cześć, jestem{" "}
               <span className="text-gradient inline-block relative">
                 Michał
                 <motion.div
-                  className="absolute -inset-2 bg-gradient-to-r from-accent-blue/20 via-accent-purple/20 to-accent-cyan/20 rounded-2xl blur-xl -z-10"
+                  className="absolute -inset-1 sm:-inset-2 bg-gradient-to-r from-accent-blue/20 via-accent-purple/20 to-accent-cyan/20 rounded-xl sm:rounded-2xl blur-lg sm:blur-xl -z-10"
                   animate={{
                     opacity: [0.5, 1, 0.5],
                   }}
@@ -112,7 +112,7 @@ export default function Hero() {
           </motion.h1>
 
           {/* Rotating Role */}
-          <div className="h-16 sm:h-20 mb-8 flex items-center justify-center">
+          <div className="h-12 sm:h-16 md:h-20 mb-6 sm:mb-8 flex items-center justify-center px-2">
             <AnimatePresence mode="wait">
               <motion.h2
                 key={currentRole}
@@ -120,7 +120,7 @@ export default function Hero() {
                 animate={{ opacity: 1, y: 0 }}
                 exit={{ opacity: 0, y: -20 }}
                 transition={{ duration: 0.3 }}
-                className="text-2xl sm:text-3xl md:text-4xl font-semibold text-slate-300"
+                className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-slate-300"
               >
                 {roles[currentRole]}
               </motion.h2>
@@ -132,7 +132,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-12"
+            className="text-base sm:text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-8 sm:mb-12 px-4"
           >
             Tworzę aplikacje mobilne w Flutter oraz nowoczesne strony
             internetowe. Pasjonuję się programowaniem i ciągle rozwijam swoje
@@ -144,11 +144,11 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.8 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16"
+            className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 px-4"
           >
             <motion.a
               href="#projects"
-              className="group relative px-8 py-4 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full font-semibold text-white overflow-hidden"
+              className="group relative w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-accent-blue to-accent-purple rounded-full font-semibold text-sm sm:text-base text-white overflow-hidden"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -163,7 +163,7 @@ export default function Hero() {
 
             <motion.a
               href="#contact"
-              className="px-8 py-4 glass rounded-full font-semibold text-white hover:glass-strong transition-all"
+              className="w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 glass rounded-full font-semibold text-sm sm:text-base text-white hover:glass-strong transition-all"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
@@ -176,7 +176,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 1 }}
-            className="flex items-center justify-center space-x-6"
+            className="flex items-center justify-center space-x-4 sm:space-x-6"
           >
             {[
               {
@@ -200,14 +200,14 @@ export default function Hero() {
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-4 rounded-full glass hover:glass-strong transition-all group relative"
+                className="p-3 sm:p-4 rounded-full glass hover:glass-strong transition-all group relative"
                 whileHover={{ y: -5 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 1 + index * 0.1 }}
               >
-                <social.icon className="w-6 h-6 text-slate-300 group-hover:text-accent-purple transition-colors" />
+                <social.icon className="w-5 h-5 sm:w-6 sm:h-6 text-slate-300 group-hover:text-accent-purple transition-colors" />
                 <motion.div
                   className="absolute inset-0 rounded-full bg-accent-purple/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity"
                   layoutId={`social-glow-${index}`}

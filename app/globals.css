@@ -9,12 +9,36 @@
     box-sizing: border-box;
   }
 
-  body {
-    @apply bg-bg-primary text-slate-100;
+  /* Responsive base font size - scales with viewport and user preferences */
+  html {
+    /* Larger base font size for better readability */
+    font-size: 16px;
+    scroll-behavior: smooth;
   }
 
-  html {
-    scroll-behavior: smooth;
+  /* Increase font size on larger screens for better readability */
+  @media (min-width: 768px) {
+    html {
+      font-size: 17px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    html {
+      font-size: 18px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    html {
+      font-size: 19px;
+    }
+  }
+
+  body {
+    @apply bg-bg-primary text-slate-100;
+    /* Use relative units for better zoom support */
+    line-height: 1.6;
   }
 
   /* Performance optimizations */
@@ -108,6 +132,32 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
     opacity: 0.025;
     pointer-events: none;
+  }
+
+  /* Responsive utilities */
+  .container-safe {
+    padding-left: max(1rem, env(safe-area-inset-left));
+    padding-right: max(1rem, env(safe-area-inset-right));
+  }
+
+  @media (max-width: 640px) {
+    .text-balance {
+      text-wrap: balance;
+    }
+  }
+
+  /* Touch-friendly tap targets */
+  .tap-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent text selection on interactive elements (mobile) */
+  .no-select {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
   }
 }
 

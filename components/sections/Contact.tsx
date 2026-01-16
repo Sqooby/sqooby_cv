@@ -44,11 +44,11 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative py-32 overflow-hidden">
+    <section id="contact" className="relative py-16 sm:py-24 lg:py-32 overflow-hidden">
       {/* Background Effects */}
       <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-accent-blue/10 rounded-full blur-3xl" />
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent-purple/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/3 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-accent-blue/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-accent-purple/10 rounded-full blur-3xl" />
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -57,37 +57,37 @@ export default function Contact() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="text-center mb-16"
+          className="text-center mb-12 sm:mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4">
             Skontaktuj <span className="text-gradient">się</span>
           </h2>
-          <p className="text-slate-400 text-lg max-w-2xl mx-auto">
+          <p className="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto px-4">
             Masz pomysł na projekt lub po prostu chcesz pogadać? Śmiało pisz!
           </p>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="space-y-8"
+            className="space-y-6 sm:space-y-8"
           >
             <div>
-              <h3 className="text-3xl font-display font-bold mb-6 text-gradient">
+              <h3 className="text-2xl sm:text-3xl font-display font-bold mb-4 sm:mb-6 text-gradient">
                 Stwórzmy coś niesamowitego razem
               </h3>
-              <p className="text-slate-400 leading-relaxed">
+              <p className="text-sm sm:text-base text-slate-400 leading-relaxed">
                 Czy masz pytanie, propozycję projektu, czy po prostu chcesz się przywitać,
                 postaram się odpowiedzieć jak najszybciej.
               </p>
             </div>
 
             {/* Contact Methods */}
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4">
               {[
                 {
                   icon: Mail,
@@ -114,23 +114,23 @@ export default function Contact() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: index * 0.1 }}
-                  className="glass p-4 rounded-xl hover:glass-strong transition-all group"
+                  className="glass p-3 sm:p-4 rounded-xl hover:glass-strong transition-all group"
                 >
-                  <div className="flex items-center space-x-4">
-                    <div className="p-3 bg-gradient-to-br from-accent-blue to-accent-purple rounded-lg">
-                      <item.icon className="w-5 h-5 text-white" />
+                  <div className="flex items-center space-x-3 sm:space-x-4">
+                    <div className="p-2 sm:p-3 bg-gradient-to-br from-accent-blue to-accent-purple rounded-lg flex-shrink-0">
+                      <item.icon className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
                     </div>
-                    <div>
-                      <p className="text-sm text-slate-500">{item.label}</p>
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs sm:text-sm text-slate-500">{item.label}</p>
                       {item.href ? (
                         <a
                           href={item.href}
-                          className="text-white font-medium group-hover:text-accent-purple transition-colors"
+                          className="text-sm sm:text-base text-white font-medium group-hover:text-accent-purple transition-colors truncate block"
                         >
                           {item.value}
                         </a>
                       ) : (
-                        <p className="text-white font-medium">{item.value}</p>
+                        <p className="text-sm sm:text-base text-white font-medium">{item.value}</p>
                       )}
                     </div>
                   </div>
@@ -140,14 +140,14 @@ export default function Contact() {
 
             {/* Decorative Element */}
             <motion.div
-              className="relative p-8 glass rounded-2xl overflow-hidden"
+              className="relative p-6 sm:p-8 glass rounded-2xl overflow-hidden hidden sm:block"
               whileHover={{ scale: 1.02 }}
             >
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-accent-blue/20 to-accent-purple/20 rounded-full blur-2xl" />
-              <p className="relative text-slate-300 italic">
+              <p className="relative text-sm sm:text-base text-slate-300 italic">
                 "The best way to predict the future is to create it."
               </p>
-              <p className="relative text-sm text-slate-500 mt-2">- Peter Drucker</p>
+              <p className="relative text-xs sm:text-sm text-slate-500 mt-2">- Peter Drucker</p>
             </motion.div>
           </motion.div>
 
@@ -158,55 +158,55 @@ export default function Contact() {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit(onSubmit)} className="glass p-8 rounded-2xl space-y-6">
+            <form onSubmit={handleSubmit(onSubmit)} className="glass p-6 sm:p-8 rounded-2xl space-y-4 sm:space-y-6">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="name" className="block text-xs sm:text-sm font-medium text-slate-300 mb-2">
                   Imię
                 </label>
                 <input
                   {...register('name')}
                   type="text"
                   id="name"
-                  className="w-full px-4 py-3 bg-bg-primary/50 border border-white/10 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-accent-purple transition-colors"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-bg-primary/50 border border-white/10 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-accent-purple transition-colors"
                   placeholder="Twoje imię"
                 />
                 {errors.name && (
-                  <p className="mt-1 text-sm text-red-400">{errors.name.message}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-red-400">{errors.name.message}</p>
                 )}
               </div>
 
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="email" className="block text-xs sm:text-sm font-medium text-slate-300 mb-2">
                   Email
                 </label>
                 <input
                   {...register('email')}
                   type="email"
                   id="email"
-                  className="w-full px-4 py-3 bg-bg-primary/50 border border-white/10 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-accent-purple transition-colors"
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-bg-primary/50 border border-white/10 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-accent-purple transition-colors"
                   placeholder="twoj@email.com"
                 />
                 {errors.email && (
-                  <p className="mt-1 text-sm text-red-400">{errors.email.message}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-red-400">{errors.email.message}</p>
                 )}
               </div>
 
               {/* Message Field */}
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-slate-300 mb-2">
+                <label htmlFor="message" className="block text-xs sm:text-sm font-medium text-slate-300 mb-2">
                   Wiadomość
                 </label>
                 <textarea
                   {...register('message')}
                   id="message"
-                  rows={5}
-                  className="w-full px-4 py-3 bg-bg-primary/50 border border-white/10 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-accent-purple transition-colors resize-none"
+                  rows={4}
+                  className="w-full px-3 sm:px-4 py-2.5 sm:py-3 text-sm sm:text-base bg-bg-primary/50 border border-white/10 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:border-accent-purple transition-colors resize-none"
                   placeholder="Opowiedz mi o swoim projekcie..."
                 />
                 {errors.message && (
-                  <p className="mt-1 text-sm text-red-400">{errors.message.message}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-red-400">{errors.message.message}</p>
                 )}
               </div>
 
@@ -214,14 +214,14 @@ export default function Contact() {
               <motion.button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full px-6 py-4 bg-gradient-to-r from-accent-blue to-accent-purple rounded-lg font-semibold text-white flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full px-5 sm:px-6 py-3 sm:py-4 bg-gradient-to-r from-accent-blue to-accent-purple rounded-lg font-semibold text-sm sm:text-base text-white flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed"
                 whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
                 whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
               >
                 {isSubmitting ? (
                   <>
                     <motion.div
-                      className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full"
+                      className="w-4 h-4 sm:w-5 sm:h-5 border-2 border-white/30 border-t-white rounded-full"
                       animate={{ rotate: 360 }}
                       transition={{ duration: 1, repeat: Infinity, ease: 'linear' }}
                     />
@@ -229,7 +229,7 @@ export default function Contact() {
                   </>
                 ) : (
                   <>
-                    <Send className="w-5 h-5" />
+                    <Send className="w-4 h-4 sm:w-5 sm:h-5" />
                     <span>Wyślij wiadomość</span>
                   </>
                 )}
@@ -240,7 +240,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-sm text-center"
+                  className="p-3 sm:p-4 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-xs sm:text-sm text-center"
                 >
                   Wiadomość wysłana pomyślnie! Odezwę się wkrótce.
                 </motion.div>
@@ -250,7 +250,7 @@ export default function Contact() {
                 <motion.div
                   initial={{ opacity: 0, y: -10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-sm text-center"
+                  className="p-3 sm:p-4 bg-red-500/20 border border-red-500/50 rounded-lg text-red-400 text-xs sm:text-sm text-center"
                 >
                   Coś poszło nie tak. Spróbuj ponownie.
                 </motion.div>

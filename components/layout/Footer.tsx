@@ -15,64 +15,64 @@ export default function Footer() {
   }
 
   return (
-    <footer className="relative mt-32 border-t border-white/10">
+    <footer className="relative mt-16 sm:mt-24 lg:mt-32 border-t border-white/10">
       {/* Aurora effect */}
       <div className="aurora">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-accent-blue/20 rounded-full blur-3xl" />
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-accent-purple/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-accent-blue/20 rounded-full blur-3xl" />
+        <div className="absolute top-0 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-accent-purple/20 rounded-full blur-3xl" />
       </div>
 
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12 relative">
-        <div className="grid md:grid-cols-3 gap-8 items-center">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center">
           {/* Left - Brand */}
-          <div>
-            <h3 className="text-2xl font-display font-bold text-gradient mb-2">
+          <div className="text-center md:text-left">
+            <h3 className="text-xl sm:text-2xl font-display font-bold text-gradient mb-1.5 sm:mb-2">
               Portfolio
             </h3>
-            <p className="text-slate-400 text-sm">
+            <p className="text-slate-400 text-xs sm:text-sm">
               Tworzę nowoczesne aplikacje
             </p>
           </div>
 
           {/* Center - Social Links */}
-          <div className="flex justify-center space-x-6">
+          <div className="flex justify-center space-x-4 sm:space-x-6">
             {socialLinks.map((social, index) => (
               <motion.a
                 key={social.label}
                 href={social.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-3 rounded-full glass hover:glass-strong transition-all group"
+                className="p-2.5 sm:p-3 rounded-full glass hover:glass-strong transition-all group"
                 whileHover={{ scale: 1.1, y: -2 }}
                 whileTap={{ scale: 0.95 }}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
               >
-                <social.icon className="w-5 h-5 text-slate-300 group-hover:text-accent-purple transition-colors" />
+                <social.icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-300 group-hover:text-accent-purple transition-colors" />
               </motion.a>
             ))}
           </div>
 
           {/* Right - Back to Top */}
-          <div className="flex justify-end">
+          <div className="flex justify-center md:justify-end">
             <motion.button
               onClick={scrollToTop}
               className="flex items-center space-x-2 px-4 py-2 rounded-full glass hover:glass-strong transition-all group"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span className="text-sm font-medium text-slate-300 group-hover:text-white">
+              <span className="text-xs sm:text-sm font-medium text-slate-300 group-hover:text-white">
                 Wróć na górę
               </span>
-              <ArrowUp className="w-4 h-4 text-accent-purple group-hover:animate-bounce" />
+              <ArrowUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-purple group-hover:animate-bounce" />
             </motion.button>
           </div>
         </div>
 
         {/* Bottom - Copyright */}
-        <div className="mt-8 pt-8 border-t border-white/5 text-center">
-          <p className="text-slate-500 text-sm">
+        <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/5 text-center">
+          <p className="text-slate-500 text-xs sm:text-sm">
             © {new Date().getFullYear()} Portfolio. Stworzone z{' '}
             <span className="text-accent-purple">Next.js</span> i{' '}
             <span className="text-accent-blue">Tailwind CSS</span>
