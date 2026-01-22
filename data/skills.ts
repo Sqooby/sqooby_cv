@@ -2,6 +2,7 @@ export const skillsData = {
   mobile: [
     { name: 'Flutter' },
     { name: 'Dart' },
+    { name: 'React Native' },
     { name: 'Kotlin' },
   ],
   web: [

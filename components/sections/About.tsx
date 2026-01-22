@@ -121,7 +121,7 @@ export default function About() {
                 <p>
                   Jestem studentem informatyki na Politechnice Rzeszowskiej,
                   obecnie realizującym studia magisterskie. Specjalizuję się w
-                  tworzeniu aplikacji mobilnych w technologii Flutter (Dart).
+                  tworzeniu aplikacji mobilnych w technologii Flutter (Dart)/React Native.
                 </p>
                 <p>
                   Moja droga w IT rozpoczęła się od zainteresowania
