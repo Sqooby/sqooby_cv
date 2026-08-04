@@ -1,0 +1,25 @@
+<!-- @dsCard group="Components" viewport="700x620" name="Portfolio" subtitle="Nav, tilt cards, project tiles, stats, quote, CTA, footer" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body style="background:var(--bg-page);padding:0;overflow:hidden"><div id="root"></div>
+<script type="text/babel">
+const {NavBar,TiltCard,ProjectCard,StatBlock,TestimonialCard,ContactCTA,Footer,MediaFrame}=window.LoopPortfolioDesignSystem_41f2ca;
+ReactDOM.createRoot(document.getElementById('root')).render(
+<div style={{display:'flex',flexDirection:'column',gap:20,padding:'0 0 20px'}}>
+  <NavBar brand="Loop" sticky={false} items={[{id:'w',label:'Work'},{id:'a',label:'About'},{id:'p',label:'Playground'}]} activeItem="w" cta="Hire me"/>
+  <div style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:16,padding:'0 20px'}}>
+    <TiltCard><ProjectCard title="Nimbus" summary="Rebrand + design system for a weather app." tags={['Brand','Web']} year="2026" palette="mint"/></TiltCard>
+    <TiltCard><ProjectCard title="Halogen" summary="3D product tour, built in WebGL." tags={['3D','Motion']} year="2025" palette="sunset"/></TiltCard>
+  </div>
+  <div style={{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:12,padding:'0 20px'}}>
+    <StatBlock value="9 yrs" label="Designing" tone="mint"/><StatBlock value="48" label="Shipped" tone="blue"/><StatBlock value="3" label="Awards" tone="butter"/>
+  </div>
+  <div style={{padding:'0 20px'}}><TestimonialCard quote="The level of execution was exactly what was promised." author="Ana Ruiz" role="Head of Brand"/></div>
+  <div style={{padding:'0 20px'}}><ContactCTA headline="Let's make something loud" email="hi@loop.studio" note="Taking two projects this quarter."/></div>
+  <Footer brand="Loop" tagline="Independent design studio." links={[{label:'Work'},{label:'About'},{label:'Resume'}]} socials={[{label:'X',icon:'twitter'},{label:'GitHub',icon:'github'},{label:'Mail',icon:'mail'}]}/>
+</div>);
+</script></body></html>

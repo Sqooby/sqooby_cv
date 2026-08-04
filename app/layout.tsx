@@ -1,31 +1,31 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, JetBrains_Mono, Crimson_Pro } from "next/font/google";
+import { CustomCursor } from "@/components/effects/CustomCursor";
+import { Archivo, DM_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-// Unique font pairing - elegant serif display + modern sans body
-const crimsonPro = Crimson_Pro({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-  variable: "--font-display",
+// Loop DS: Archivo (variable wght+wdth) for display, DM Sans for body, JetBrains Mono for meta
+const archivo = Archivo({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-archivo",
   display: "swap",
+  axes: ["wdth"],
 });
 
-const spaceGrotesk = Space_Grotesk({
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-inter",
+const dmSans = DM_Sans({
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-dm-sans",
   display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
+  subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "700"],
   variable: "--font-mono",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  title: "Michał - Flutter Developer Portfolio",
+  title: "Michał Basznianin — Flutter Developer",
   description:
     "Portfolio Flutter developera - aplikacje mobilne, projekty web. Student informatyki na Politechnice Rzeszowskiej.",
   keywords: [
@@ -46,9 +46,10 @@ export default function RootLayout({
   return (
     <html
       lang="pl"
-      className={`${spaceGrotesk.variable} ${crimsonPro.variable} ${jetbrainsMono.variable}`}
+      className={`${archivo.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
-      <body className="bg-bg-primary text-white antialiased overflow-x-hidden">
+      <body className="bg-paper-200 text-ink-900 font-sans antialiased overflow-x-hidden cursor-none">
+        <CustomCursor />
         {children}
       </body>
     </html>

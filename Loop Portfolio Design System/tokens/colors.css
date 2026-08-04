@@ -1,0 +1,46 @@
+/* Loop — colour system. Warm paper base, ink outlines, saturated candy accents. */
+:root{
+  /* Base ramp — ink */
+  --ink-900:#0D0C0B;--ink-800:#1A1917;--ink-700:#2E2C29;--ink-600:#4A4640;--ink-500:#6E6960;--ink-400:#948E83;--ink-300:#BDB6A9;--ink-200:#DED8CC;--ink-100:#EFEAE0;
+
+  /* Base ramp — paper (warm cream, from the reference hero) */
+  --paper-000:#FFFDF9;--paper-100:#FDF7EF;--paper-200:#F7EFE5;--paper-300:#F0E4D5;--paper-400:#E6D6C2;
+
+  /* Accents — flat, high-chroma, always paired with an ink outline */
+  --blue-500:#2B5CFF;--blue-300:#9DB8FF;--blue-100:#D7E3FF;
+  --mint-500:#33D18A;--mint-300:#8FEFC0;--mint-100:#D9F9E8;
+  --lilac-500:#8B5CF6;--lilac-300:#C9B4FF;--lilac-100:#EDE5FF;
+  --blush-500:#FF5C9A;--blush-300:#FFA9C8;--blush-100:#FFE1EC;
+  --butter-500:#FFC53D;--butter-300:#FFDD8A;--butter-100:#FFF3D6;
+  --clay-500:#FF5A2B;--clay-300:#FFA98C;--clay-100:#FFE5DA;
+
+  /* Semantic surfaces */
+  --bg-page:var(--paper-200);
+  --bg-surface:var(--paper-000);
+  --bg-surface-sunken:var(--paper-100);
+  --bg-inverse:var(--ink-900);
+  --bg-tint-cool:var(--blue-100);
+  --bg-tint-warm:var(--butter-100);
+
+  /* Semantic text */
+  --text-primary:var(--ink-900);
+  --text-secondary:var(--ink-600);
+  --text-muted:var(--ink-500);
+  --text-inverse:var(--paper-000);
+  --text-link:var(--blue-500);
+  --text-link-hover:var(--lilac-500);
+
+  /* Semantic lines + accents */
+  --border-ink:var(--ink-900);
+  --border-soft:var(--ink-200);
+  --accent:var(--blue-500);
+  --accent-contrast:var(--paper-000);
+  --accent-soft:var(--blue-100);
+  --focus-ring:var(--lilac-500);
+
+  /* Status */
+  --status-positive:var(--mint-500);
+  --status-warning:var(--butter-500);
+  --status-critical:var(--clay-500);
+  --status-info:var(--blue-500);
+}

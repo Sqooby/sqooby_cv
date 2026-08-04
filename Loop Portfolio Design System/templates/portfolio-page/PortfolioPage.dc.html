@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="One-page portfolio" description="Loop's full portfolio page: 3D-tilt work grid, about, contact slab." -->
+<helmet><script src="./ds-base.js"></script></helmet>
+<div style="min-height:100vh;background:#F7EFE5;color:#0D0C0B;font-family:'DM Sans',system-ui,sans-serif">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.NavBar" brand="Loop" cta="Hire me" hint-size="100%,96px"></x-import>
+<section style="position:relative;overflow:hidden;padding:64px 32px 96px;text-align:center">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.Blob" palette="blue" size="700" opacity="0.5" style="position:absolute;top:-260px;left:-180px;z-index:0" hint-size="700px,700px"></x-import>
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.Blob" palette="sunset" size="540" opacity="0.42" style="position:absolute;top:40px;right:-160px;z-index:0" hint-size="540px,540px"></x-import>
+<div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:28px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.Badge" status="available" hint-size="280px,32px">Open for projects — September 2026</x-import>
+<h1 style="margin:0;font-family:Archivo,sans-serif;font-weight:900;font-variation-settings:'wdth' 118;font-size:clamp(56px,11vw,150px);line-height:0.86;letter-spacing:-0.045em;max-width:14ch">Design that refuses to be quiet</h1>
+<p style="margin:0;font-size:21px;line-height:1.5;color:#4A4640;max-width:52ch">I'm a designer working across brand, product and 3D. Nine years of shipping work that is loud on the outside and precise underneath.</p>
+<div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.Button" size="lg" hint-size="200px,60px">See the work</x-import>
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.Button" size="lg" tone="paper" hint-size="200px,60px">Book a call</x-import>
+</div>
+<div style="width:min(100%,900px);margin-top:24px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.TiltCard" max="8" hint-size="100%,500px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.MediaFrame" palette="lilac" ratio="16 / 9" label="Showreel — drop a cover image here" hint-size="100%,500px"></x-import>
+</x-import>
+</div>
+</div>
+</section>
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.Marquee" items="{{ services }}" hint-size="100%,64px"></x-import>
+<section style="padding:120px 32px;max-width:1280px;margin:0 auto;display:flex;flex-direction:column;gap:40px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.SectionHeading" eyebrow="01 / Work" title="Selected projects" description="Six of the forty-eight things I've shipped." hint-size="100%,140px"></x-import>
+<div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:24px">
+<sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.TiltCard" max="9" hint-size="100%,420px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.ProjectCard" dc-props="{{ p }}" hint-size="100%,420px"></x-import>
+</x-import>
+</sc-for>
+</div>
+</section>
+<section style="padding:0 32px 120px;max-width:1280px;margin:0 auto;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:40px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:24px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.SectionHeading" eyebrow="02 / About" title="Designer, occasional 3D tinkerer" hint-size="100%,120px"></x-import>
+<p style="margin:0;font-size:21px;line-height:1.5">I run a one-person studio out of Kraków. Most of my work starts as a brand problem and ends as a product.</p>
+<p style="margin:0;color:#4A4640;line-height:1.55">Before going independent I led design at two startups and spent a year making title sequences, which is where the 3D habit comes from.</p>
+<div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.StatBlock" value="9 yrs" label="Designing" tone="mint" hint-size="100%,120px"></x-import>
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.StatBlock" value="48" label="Projects shipped" tone="blue" hint-size="100%,120px"></x-import>
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.StatBlock" value="3" label="Awards" tone="butter" hint-size="100%,120px"></x-import>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:24px">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.MediaFrame" palette="paper" ratio="4 / 5" label="Portrait" hint-size="100%,480px"></x-import>
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.TestimonialCard" quote="The level of execution was exactly what was promised — and then some." author="Ana Ruiz" role="Head of Brand, Orbit" hint-size="100%,240px"></x-import>
+</div>
+</section>
+<section style="padding:0 32px 120px;max-width:1280px;margin:0 auto">
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.ContactCTA" headline="Let's make something loud" email="hi@loop.studio" note="Taking two projects this quarter. Tell me what you're building." hint-size="100%,480px"></x-import>
+</section>
+<x-import component-from-global-scope="LoopPortfolioDesignSystem_41f2ca.Footer" brand="Loop" tagline="Independent design studio — Kraków, remote everywhere." links="{{ footerLinks }}" socials="{{ socials }}" hint-size="100%,260px"></x-import>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1280,&quot;height&quot;:900},&quot;projectCount&quot;:{&quot;editor&quot;:&quot;int&quot;,&quot;default&quot;:6,&quot;min&quot;:2,&quot;max&quot;:6,&quot;tsType&quot;:&quot;number&quot;,&quot;section&quot;:&quot;Work grid&quot;}}">
+class Component extends DCLogic {
+  renderVals() {
+    const palettes = ['mint','sunset','lilac','blue','mint','blue'];
+    const base = [
+      { id:'nimbus', title:'Nimbus', summary:'Rebrand and design system for a weather app used by 2M people.', tags:['Brand','Design system'], year:'2026' },
+      { id:'halogen', title:'Halogen', summary:'A WebGL product tour where the hardware assembles itself as you scroll.', tags:['3D','Motion'], year:'2025' },
+      { id:'poste', title:'Poste', summary:'Editorial platform for independent writers — typography-first, dark by default.', tags:['Product','Web'], year:'2025' },
+      { id:'orbit', title:'Orbit Card', summary:'Fintech card launch: identity, motion kit and the whole marketing site.', tags:['Brand','Web'], year:'2024' },
+      { id:'fern', title:'Fern', summary:'Packaging and site for a small-batch tea company in Lisbon.', tags:['Brand'], year:'2024' },
+      { id:'kiosk', title:'Kiosk', summary:'An iPad POS rebuilt around one-handed use for busy counters.', tags:['Product'], year:'2023' },
+    ];
+    const count = this.props.projectCount ?? 6;
+    return {
+      projects: base.slice(0, count).map((p, i) => ({ ...p, palette: palettes[i] })),
+      services: ['Brand systems','Product design','3D & motion','Design systems','Art direction'],
+      footerLinks: [{ label:'Work' },{ label:'About' },{ label:'Resume' },{ label:'Letter' }],
+      socials: [{ label:'X', icon:'twitter' },{ label:'GitHub', icon:'github' },{ label:'Dribbble', icon:'dribbble' },{ label:'Email', icon:'mail' }],
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+:root{
+  --page-max:1280px;
+  --measure:64ch;/* @kind other */
+  --control-h-sm:36px;--control-h:48px;--control-h-lg:60px;
+  --nav-h:72px;
+  --perspective:1200px;/* @kind other */
+  --tilt-max:10deg;/* @kind other */
+  --blob-blur:48px;
+  --grain-opacity:.05;/* @kind other */
+}

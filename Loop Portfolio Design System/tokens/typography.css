@@ -1,0 +1,27 @@
+/* Loop — type. Archivo (variable width+weight) for display, DM Sans for text, JetBrains Mono for meta. */
+:root{
+  --font-display:"Archivo","Archivo Black",system-ui,sans-serif;
+  --font-body:"DM Sans",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,monospace;
+
+  /* Display — tight, heavy, slightly expanded */
+  --text-hero:clamp(56px,11vw,168px);
+  --text-display-1:clamp(44px,7vw,104px);
+  --text-display-2:clamp(36px,5vw,72px);
+  --text-title-1:44px;--text-title-2:32px;--text-title-3:24px;
+  /* Text */
+  --text-lead:21px;--text-body:17px;--text-body-sm:15px;--text-caption:13px;
+  /* Meta / mono eyebrow */
+  --text-eyebrow:12px;
+
+  --weight-regular:400;--weight-medium:500;--weight-bold:700;--weight-black:900;
+
+  --leading-hero:0.86;--leading-display:0.94;--leading-title:1.08;
+  --leading-body:1.55;--leading-tight:1.25;
+
+  --tracking-hero:-0.045em;--tracking-display:-0.03em;--tracking-title:-0.02em;
+  --tracking-body:0em;--tracking-eyebrow:0.14em;
+
+  --width-display:112;/* @kind other */ /* Archivo wdth axis for display type */
+  --width-text:100;/* @kind other */
+}
