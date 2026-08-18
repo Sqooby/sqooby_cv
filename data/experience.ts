@@ -10,10 +10,11 @@ export interface Experience {
 export const experienceData: Experience[] = [
   {
     id: "1",
-    title: "Flutter Developer",
+    title: "Mobile Developer",
     company: "IT8",
     period: "Lut 2024 - Obecnie",
-    description: "Rozwój aplikacji mobilnych w technologii Flutter (Dart).",
+    description:
+      "Rozwój aplikacji mobilnych w technologii Flutter (Dart) /IOS(Swift).",
     achievements: [
       "Rozwój aplikacji mobilnej do zarządzania wlasnym zdrowiem oraz profilaktyką",
       "Tworzenie dokumentacji technicznej projektu",
