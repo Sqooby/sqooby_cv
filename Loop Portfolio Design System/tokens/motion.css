@@ -1,0 +1,10 @@
+:root{
+  --ease-out:cubic-bezier(.22,1,.36,1);/* @kind other */
+  --ease-in-out:cubic-bezier(.65,0,.35,1);/* @kind other */
+  --ease-spring:cubic-bezier(.34,1.56,.64,1);/* @kind other */
+  --dur-fast:120ms;/* @kind other */--dur-base:220ms;/* @kind other */--dur-slow:420ms;/* @kind other */--dur-scene:900ms;/* @kind other */
+  --transition-control:transform var(--dur-fast) var(--ease-spring),box-shadow var(--dur-fast) var(--ease-out),background-color var(--dur-base) var(--ease-out);/* @kind other */
+  --hover-lift:translate(-2px,-2px);/* @kind other */
+  --press-sink:translate(2px,2px);/* @kind other */
+  --marquee-speed:28s;/* @kind other */
+}

@@ -16,7 +16,7 @@ export const projectsData: Project[] = [
     description: 'Aplikacja mobilna Flutter stworzona dla organizacji Wellysa. OnkoRadar to kompleksowe narzędzie wspierające pacjentów onkologicznych w codziennym monitorowaniu zdrowia.',
     image: '/images/projects/onkoradar.jpg',
     technologies: ['Flutter', 'Dart', 'Firebase', 'Mobile Development'],
-    liveUrl: 'https://wellysa.com',
+    liveUrl: 'https://apps.apple.com/pl/app/wellysa-asystent/id6751268147?l=pl',
     featured: true,
   },
   {

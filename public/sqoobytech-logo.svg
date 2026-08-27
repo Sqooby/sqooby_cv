@@ -1,0 +1,68 @@
+<svg width="900" height="280" viewBox="0 0 900 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="pgrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#8b4fd1"/>
+      <stop offset="45%" stop-color="#6a2fb8"/>
+      <stop offset="100%" stop-color="#2e1a6b"/>
+    </linearGradient>
+    <style>
+      .word { font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', 'Arial Black', sans-serif; font-size: 140px; }
+    </style>
+  </defs>
+
+  <!-- drop shadow -->
+  <text class="word" fill="#000000" transform="translate(12,16)">
+    <tspan x="20"  y="165" rotate="-4">S</tspan>
+    <tspan x="100" y="182" rotate="3">q</tspan>
+    <tspan x="180" y="155" rotate="-3">o</tspan>
+    <tspan x="255" y="180" rotate="4">o</tspan>
+    <tspan x="330" y="158" rotate="-2">b</tspan>
+    <tspan x="405" y="182" rotate="3">y</tspan>
+    <tspan x="480" y="148" rotate="-4">T</tspan>
+    <tspan x="565" y="174" rotate="2">e</tspan>
+    <tspan x="630" y="156" rotate="-3">c</tspan>
+    <tspan x="700" y="180" rotate="4">h</tspan>
+  </text>
+
+  <!-- black outer outline -->
+  <text class="word" fill="none" stroke="#000000" stroke-width="28" stroke-linejoin="round" stroke-linecap="round">
+    <tspan x="20"  y="165" rotate="-4">S</tspan>
+    <tspan x="100" y="182" rotate="3">q</tspan>
+    <tspan x="180" y="155" rotate="-3">o</tspan>
+    <tspan x="255" y="180" rotate="4">o</tspan>
+    <tspan x="330" y="158" rotate="-2">b</tspan>
+    <tspan x="405" y="182" rotate="3">y</tspan>
+    <tspan x="480" y="148" rotate="-4">T</tspan>
+    <tspan x="565" y="174" rotate="2">e</tspan>
+    <tspan x="630" y="156" rotate="-3">c</tspan>
+    <tspan x="700" y="180" rotate="4">h</tspan>
+  </text>
+
+  <!-- orange outline -->
+  <text class="word" fill="none" stroke="#ff8c1a" stroke-width="16" stroke-linejoin="round" stroke-linecap="round">
+    <tspan x="20"  y="165" rotate="-4">S</tspan>
+    <tspan x="100" y="182" rotate="3">q</tspan>
+    <tspan x="180" y="155" rotate="-3">o</tspan>
+    <tspan x="255" y="180" rotate="4">o</tspan>
+    <tspan x="330" y="158" rotate="-2">b</tspan>
+    <tspan x="405" y="182" rotate="3">y</tspan>
+    <tspan x="480" y="148" rotate="-4">T</tspan>
+    <tspan x="565" y="174" rotate="2">e</tspan>
+    <tspan x="630" y="156" rotate="-3">c</tspan>
+    <tspan x="700" y="180" rotate="4">h</tspan>
+  </text>
+
+  <!-- main purple/blue fill -->
+  <text class="word" fill="url(#pgrad)" stroke="#1a0f3d" stroke-width="2">
+    <tspan x="20"  y="165" rotate="-4">S</tspan>
+    <tspan x="100" y="182" rotate="3">q</tspan>
+    <tspan x="180" y="155" rotate="-3">o</tspan>
+    <tspan x="255" y="180" rotate="4">o</tspan>
+    <tspan x="330" y="158" rotate="-2">b</tspan>
+    <tspan x="405" y="182" rotate="3">y</tspan>
+    <tspan x="480" y="148" rotate="-4">T</tspan>
+    <tspan x="565" y="174" rotate="2">e</tspan>
+    <tspan x="630" y="156" rotate="-3">c</tspan>
+    <tspan x="700" y="180" rotate="4">h</tspan>
+  </text>
+</svg>

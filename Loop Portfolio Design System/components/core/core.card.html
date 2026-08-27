@@ -1,0 +1,36 @@
+<!-- @dsCard group="Components" viewport="700x560" name="Core" subtitle="Buttons, pills, tags, badges, cards, stickers, marquee" -->
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script></head>
+<body style="background:var(--bg-page);padding:20px;overflow:hidden"><div id="root"></div>
+<script type="text/babel">
+const {Button,IconButton,Icon,Pill,Tag,Badge,Card,SectionHeading,Marquee,Sticker,Blob}=window.LoopPortfolioDesignSystem_41f2ca;
+const Row=({children,label})=><div style={{display:'flex',flexDirection:'column',gap:8}}><span className="loop-eyebrow">{label}</span><div style={{display:'flex',gap:12,flexWrap:'wrap',alignItems:'center'}}>{children}</div></div>;
+ReactDOM.createRoot(document.getElementById('root')).render(
+<div style={{display:'flex',flexDirection:'column',gap:20}}>
+  <Row label="Button — tones">
+    <Button>Start</Button><Button tone="blue">Blue</Button><Button tone="mint">Mint</Button><Button tone="butter">Butter</Button><Button variant="outline">Outline</Button><Button disabled>Disabled</Button>
+  </Row>
+  <Row label="Button — sizes + icon">
+    <Button size="sm">Small</Button><Button size="md" icon={<Icon name="arrow-right" size={16} tone="inverse"/>}>Medium</Button><Button size="lg" tone="paper" icon={<Icon name="arrow-up-right" size={18}/>}>Large</Button>
+    <IconButton name="plus" label="Add" size="sm"/><IconButton name="arrow-right" label="Next" tone="ink"/>
+  </Row>
+  <Row label="Pill / Tag / Badge">
+    <Pill active>All work</Pill><Pill>Brand</Pill><Pill tone="tint">Motion</Pill>
+    <Tag tone="mint">Brand</Tag><Tag tone="lilac">3D</Tag><Tag>2026</Tag>
+    <Badge>Open for projects</Badge><Badge status="busy">Booked till Oct</Badge>
+  </Row>
+  <Row label="Card / Sticker / Blob">
+    <Card tone="paper" padding="16px" style={{width:190}}><strong>Paper</strong><div style={{fontSize:13,color:'var(--text-secondary)'}}>Default surface</div></Card>
+    <Card tone="butter" padding="16px" style={{width:150}}><strong>Butter</strong></Card>
+    <Card tone="ink" padding="16px" style={{width:130}}><strong>Ink</strong></Card>
+    <Sticker icon="sparkles" tone="mint" float={false}>New</Sticker>
+    <div style={{position:'relative',width:88,height:88}}><Blob palette="sunset" size={88} blur="14px" spin={false}/></div>
+  </Row>
+  <SectionHeading eyebrow="01 / Work" title="Selected projects" action={<Button size="sm" variant="outline">All work</Button>}/>
+  <Marquee items={['Brand systems','Product design','3D & motion']} style={{marginLeft:-20,marginRight:-20}}/>
+</div>);
+</script></body></html>

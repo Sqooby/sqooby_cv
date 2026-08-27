@@ -1,0 +1,18 @@
+/* Two shadow families: hard "sticker" offsets (outlined UI) and soft ambient (floating 3D objects). */
+:root{
+  --border-width:2px;
+  --border-hairline:1px;
+  --outline-ink:var(--border-width) solid var(--border-ink);
+
+  --shadow-sticker-sm:2px 2px 0 var(--border-ink);
+  --shadow-sticker:4px 4px 0 var(--border-ink);
+  --shadow-sticker-lg:8px 8px 0 var(--border-ink);
+  --shadow-sticker-press:1px 1px 0 var(--border-ink);
+
+  --shadow-soft-sm:0 2px 6px rgba(13,12,11,.08);
+  --shadow-soft:0 12px 32px -12px rgba(13,12,11,.22);
+  --shadow-soft-lg:0 40px 80px -32px rgba(13,12,11,.34);
+
+  --shadow-inner-lip:inset 0 -3px 0 rgba(13,12,11,.12);
+  --glow-accent:0 0 0 6px color-mix(in oklab,var(--accent) 22%,transparent);
+}

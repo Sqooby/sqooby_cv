@@ -1,83 +1,66 @@
-'use client'
+import { Github, Linkedin, Mail } from 'lucide-react'
 
-import { Github, Linkedin, Mail, ArrowUp } from 'lucide-react'
-import { motion } from 'framer-motion'
+const links = [
+  { label: 'Projekty', href: '#projects' },
+  { label: 'O mnie', href: '#about' },
+  { label: 'Umiejętności', href: '#skills' },
+  { label: 'Kontakt', href: '#contact' },
+]
 
-const socialLinks = [
+const socials = [
   { icon: Github, href: 'https://github.com/Sqooby', label: 'GitHub' },
   { icon: Linkedin, href: 'https://www.linkedin.com/in/michał-basznianin-9a704020a/', label: 'LinkedIn' },
   { icon: Mail, href: 'mailto:michal.basznianin3@gmail.com', label: 'Email' },
 ]
 
 export default function Footer() {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-  }
-
   return (
-    <footer className="relative mt-16 sm:mt-24 lg:mt-32 border-t border-white/10">
-      {/* Aurora effect */}
-      <div className="aurora">
-        <div className="absolute top-0 left-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-accent-blue/20 rounded-full blur-3xl" />
-        <div className="absolute top-0 right-1/4 w-64 h-64 sm:w-96 sm:h-96 bg-accent-purple/20 rounded-full blur-3xl" />
-      </div>
-
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 relative">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center">
-          {/* Left - Brand */}
-          <div className="text-center md:text-left">
-            <h3 className="text-xl sm:text-2xl font-display font-bold text-gradient mb-1.5 sm:mb-2">
-              Portfolio
-            </h3>
-            <p className="text-slate-400 text-xs sm:text-sm">
-              Tworzę nowoczesne aplikacje
-            </p>
+    <footer className="border-t-2 border-ink-900">
+      <div className="container-page flex flex-col gap-10 py-12">
+        <div className="flex flex-wrap items-start justify-between gap-10">
+          <div className="flex flex-col gap-2">
+            <span
+              className="font-display text-title-1 font-black"
+              style={{ fontVariationSettings: '"wdth" 125', letterSpacing: '-0.04em' }}
+            >
+              MICHAŁ BASZNIANIN
+            </span>
+            <span className="max-w-[34ch] text-ink-600">
+              Flutter developer. Aplikacje mobilne i strony, które działają.
+            </span>
           </div>
 
-          {/* Center - Social Links */}
-          <div className="flex justify-center space-x-4 sm:space-x-6">
-            {socialLinks.map((social, index) => (
-              <motion.a
-                key={social.label}
-                href={social.href}
+          <nav className="flex flex-wrap gap-8">
+            {links.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="font-mono text-eyebrow uppercase text-ink-900 no-underline hover:text-lilac-500"
+              >
+                {link.label}
+              </a>
+            ))}
+          </nav>
+
+          <div className="flex gap-3">
+            {socials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                aria-label={s.label}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="p-2.5 sm:p-3 rounded-full glass hover:glass-strong transition-all group"
-                whileHover={{ scale: 1.1, y: -2 }}
-                whileTap={{ scale: 0.95 }}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                className="grid h-10 w-10 place-items-center rounded-full border-2 border-ink-900 bg-paper-000 text-ink-900 shadow-sticker-sm transition-all duration-fast ease-spring hover:-translate-x-0.5 hover:-translate-y-0.5 hover:shadow-sticker"
               >
-                <social.icon className="w-4 h-4 sm:w-5 sm:h-5 text-slate-300 group-hover:text-accent-purple transition-colors" />
-              </motion.a>
+                <s.icon size={16} strokeWidth={2} />
+              </a>
             ))}
           </div>
-
-          {/* Right - Back to Top */}
-          <div className="flex justify-center md:justify-end">
-            <motion.button
-              onClick={scrollToTop}
-              className="flex items-center space-x-2 px-4 py-2 rounded-full glass hover:glass-strong transition-all group"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <span className="text-xs sm:text-sm font-medium text-slate-300 group-hover:text-white">
-                Wróć na górę
-              </span>
-              <ArrowUp className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-accent-purple group-hover:animate-bounce" />
-            </motion.button>
-          </div>
         </div>
 
-        {/* Bottom - Copyright */}
-        <div className="mt-6 sm:mt-8 pt-6 sm:pt-8 border-t border-white/5 text-center">
-          <p className="text-slate-500 text-xs sm:text-sm">
-            © {new Date().getFullYear()} Portfolio. Stworzone z{' '}
-            <span className="text-accent-purple">Next.js</span> i{' '}
-            <span className="text-accent-blue">Tailwind CSS</span>
-          </p>
-        </div>
+        <span className="loop-eyebrow">
+          © {new Date().getFullYear()} Michał Basznianin — zbudowane na zbyt dużej ilości kawy
+        </span>
       </div>
     </footer>
   )
